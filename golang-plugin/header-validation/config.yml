@@ -1,0 +1,15 @@
+_format_version: '3.0'
+services:
+- name: mockbin-service-1
+  url: http://mockbin.com/request
+  routes:
+    - name: mockbin-url-1
+      protocols:
+        - "http"
+        - "https"
+      paths:
+        - /
+  plugins:
+  - name: header-validation
+    config:
+      header_key: my_header_key
